@@ -7,9 +7,10 @@ on:
         description: Only verify login and friends without sending
         type: boolean
         default: false
-  schedule:
-    - cron: "30 7 * * *"
-      timezone: "Asia/Shanghai"
+  # 云端真实发送被抖音拒绝后暂停定时；保留手动触发供诊断使用
+  # schedule:
+  #   - cron: "30 7 * * *"
+  #     timezone: "Asia/Shanghai"
 
 concurrency:
   group: douyin-daily-sender
